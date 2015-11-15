@@ -832,6 +832,19 @@ void PatcherConfig::Impl::addMotorolaDevices()
     device->setBootBlockDevs({ QCOM_BOOT, "/dev/block/mmcblk0p33" });
     device->setRecoveryBlockDevs({ QCOM_RECOVERY });
     devices.push_back(device);
+    
+    // Motorola Moto E (2015 3G)
+    device = new Device();
+    device->setId("otus");
+    device->setCodenames({ "otus", "otus_ds", "otus", "xt1505", "xt1506", "xt1511" });
+    device->setName("Motorola Moto E (2015 3G)");
+    device->setBlockDevBaseDirs({ QCOM_BASE_DIR });
+    device->setSystemBlockDevs({ QCOM_SYSTEM, "/dev/block/mmcblk0p39" });
+    device->setCacheBlockDevs({ QCOM_CACHE, "/dev/block/mmcblk0p40" });
+    device->setDataBlockDevs({ QCOM_USERDATA, "/dev/block/mmcblk0p41" });    
+    device->setBootBlockDevs({ QCOM_BOOT, "/dev/block/mmcblk0p32" });
+    device->setRecoveryBlockDevs({ QCOM_RECOVERY, "/dev/block/mmcblk0p33" });
+    devices.push_back(device);
 
     // Motorola Nexus 6
     device = new Device();
